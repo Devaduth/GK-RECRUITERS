@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>GK Group Admin</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Css -->
+    <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+    <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+    <link href="assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link href="assets/libs/%40iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>GK<span>&nbsp;Recruiters</span></h3>
+        </div>
+
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/1.jpeg)"></div>
+                <h4>CEO NAME</h4>
+                <small>CEO</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jobs.html" class="active">
+                            <span class="las la-clipboard-list"></span>
+                            <small>All Jobs</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jobApplications.html">
+                            <span class="las la-envelope"></span>
+                            <small>Job Applications</small>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Home / All Jobs</small>
+            </div>
+
+            <div class="page-content">
+
+                
+
+
+                <div class="records table-responsive">
+                    <div class="record-header">
+                        <div class="add">
+                            <button><a href="addJob.html">Add Job</a></button>
+                        </div>
+                        <div class="browse">
+                            <input type="search" placeholder="Search" class="record-search">
+                        </div>
+                    </div>
+
+                    <div class="jobs-container">
+                        <div class="container mt-10">
+                            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+
+
+                                <div
+                                    class="group shadow dark:shadow-gray-700 p-6 rounded-md bg-white dark:bg-slate-900">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+
+
+                                            <div class="ms-3">
+                                                <a href="job-detail.html"
+                                                    class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">Google</a>
+                                                <span class="block text-sm text-slate-400">2 days ago</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="bg-emerald-600/10  inline-block text-emerald-600 group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">Full time</span>
+
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <a href="job-detail.html"
+                                            class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Marketing
+                                            Director</a>
+                                        <h6 class="text-base font-medium"><i class="uil uil-map-marker"></i> USA</h6>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-[6px]">
+                                            <div class="bg-emerald-600 h-[6px] rounded-full" style="width: 55%"></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="text-slate-400 text-sm"><span
+                                                    class="text-slate-900 dark:text-white font-semibold inline-block">21
+                                                    applied</span> of 40 vacancy</span>
+                                        </div>
+                                        <button class="bg-emerald-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500"><a href="editJob.html">Edit Job</a></button>
+                                        <button class="bg-red-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">Delete</button>
+
+                                    </div>
+                                </div><!--end content-->
+
+                                <div
+                                    class="group shadow dark:shadow-gray-700 p-6 rounded-md bg-white dark:bg-slate-900">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+
+                                            <div class="ms-3">
+                                                <a href="job-detail.html"
+                                                    class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">Android</a>
+                                                <span class="block text-sm text-slate-400">2 days ago</span>
+                                            </div>
+                                        </div>
+                                        <span class="bg-emerald-600/10  inline-block text-emerald-600 group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">Remote</span>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <a href="job-detail.html"
+                                            class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Application
+                                            Developer</a>
+                                        <h6 class="text-base font-medium"><i class="uil uil-map-marker"></i> China</h6>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-[6px]">
+                                            <div class="bg-emerald-600 h-[6px] rounded-full" style="width: 55%"></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="text-slate-400 text-sm"><span
+                                                    class="text-slate-900 dark:text-white font-semibold inline-block">21
+                                                    applied</span> of 40 vacancy</span>
+                                        </div>
+                                        <button class="bg-emerald-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500"><a href="editJob.html">Edit Job</a></button>
+                                        <button class="bg-red-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">Delete</button>
+
+                                    </div>
+                                </div><!--end content-->
+
+                                <div
+                                    class="group shadow dark:shadow-gray-700 p-6 rounded-md bg-white dark:bg-slate-900">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+
+
+                                            <div class="ms-3">
+                                                <a href="job-detail.html"
+                                                    class="block text-[16px] font-semibold hover:text-emerald-600 transition-all duration-500">Lenovo</a>
+                                                <span class="block text-sm text-slate-400">2 days ago</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="bg-emerald-600/10  inline-block text-emerald-600 group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">WFH</span>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <a href="job-detail.html"
+                                            class="text-lg hover:text-emerald-600 font-semibold transition-all duration-500">Senior
+                                            Product Designer</a>
+                                        <h6 class="text-base font-medium"><i class="uil uil-map-marker"></i> Dubai</h6>
+                                    </div>
+
+                                    <div class="mt-6">
+                                        <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-[6px]">
+                                            <div class="bg-emerald-600 h-[6px] rounded-full" style="width: 55%"></div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span class="text-slate-400 text-sm"><span
+                                                    class="text-slate-900 dark:text-white font-semibold inline-block">21
+                                                    applied</span> of 40 vacancy</span>
+                                        </div>
+                                        <button class="bg-emerald-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500"><a href="editJob.html">Edit Job</a></button>
+                                        <button class="bg-red-600  inline-block text-white group-hover:text-white text-xs px-2.5 py-0.5 font-semibold rounded-full transition-all duration-500">Delete</button>
+                                    
+                                    </div>
+                                </div><!--end content-->
+                            </div><!--end grid-->
+
+
+                        </div><!--end container-->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</body>
+
+</html>

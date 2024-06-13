@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>GK Group Admin</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Css -->
+    <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+    <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+    <link href="assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link href="assets/libs/%40iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
+    <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>GK<span>&nbsp;Recruiters</span></h3>
+        </div>
+
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/1.jpeg)"></div>
+                <h4>CEO NAME</h4>
+                <small>CEO</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jobs.html" class="active">
+                            <span class="las la-clipboard-list"></span>
+                            <small>All Jobs</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jobApplications.html">
+                            <span class="las la-envelope"></span>
+                            <small>Job Applications</small>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Home / All Jobs / Add Job</small>
+            </div>
+
+            <div class="page-content">
+                <div class="add-form">
+                    <form class="job-form">
+                        <div class="form-group">
+                            <label for="job-title">Job Title</label>
+                            <input type="text" id="job-title" placeholder="Enter the title">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-description">Description</label>
+                            <textarea id="job-description" placeholder="Description..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-category">Category</label>
+                            <select id="job-category">
+                                <option>Select</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <div class="job-types">
+                                <label><input type="checkbox"> Full-Time</label>
+                                <label><input type="checkbox"> Part-Time</label>
+                                <label><input type="checkbox"> Hybrid</label>
+                                <label><input type="checkbox"> Remote</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-location">Location</label>
+                            <input type="text" id="job-location" placeholder="Enter the location">
+                        </div>
+                        <div class="form-group">
+                            <label>Skill</label>
+                            <button type="button" class="add-skill-btn">Add Skills</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-experience">Experience</label>
+                            <input type="number" id="job-experience" placeholder="Year">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-salary">Salary</label>
+                            <input type="text" id="job-salary" placeholder="$ - $">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-qualifications">Required Experience, Skills and Qualifications</label>
+                            <textarea id="job-qualifications" placeholder="Enter your main paragraph"></textarea>
+                            <textarea placeholder="Experience, Skills and Qualifications"></textarea>
+                            <textarea placeholder="Experience, Skills and Qualifications"></textarea>
+                            <button type="button" class="add-more-btn">Add More</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-responsibilities">Responsibilities and Duties</label>
+                            <textarea id="job-responsibilities" placeholder="Enter your main paragraph"></textarea>
+                            <textarea placeholder="Responsibilities and Duties..."></textarea>
+                            <button type="button" class="add-more-btn">Add More</button>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="post-btn">POST</button>
+                            <button type="button" class="cancel-btn">CANCEL</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+</body>
+
+</html>
