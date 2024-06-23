@@ -148,6 +148,9 @@
 .user-rejected{
     color: red;
 }
+.user-pending{
+    color: yellow;
+}
 #menu-toggle:checked ~ .sidebar {
     width: 60px;
 }
