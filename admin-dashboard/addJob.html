@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- Css -->
     <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
     <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
@@ -16,9 +21,16 @@
     <link href="assets/libs/%40iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
     <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+
+
 </head>
 
 <body>
+
+    <style>
+
+    </style>
+
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
@@ -50,6 +62,12 @@
                         <a href="jobApplications.html">
                             <span class="las la-envelope"></span>
                             <small>Job Applications</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="applicants.html" >
+                            <span class="las la-envelope"></span>
+                            <small>Applicants</small>
                         </a>
                     </li>
 
@@ -101,71 +119,202 @@
             </div>
 
             <div class="page-content">
-                <div class="add-form">
-                    <form class="job-form">
-                        <div class="form-group">
-                            <label for="job-title">Job Title</label>
-                            <input type="text" id="job-title" placeholder="Enter the title">
-                        </div>
-                        <div class="form-group">
-                            <label for="job-description">Description</label>
-                            <textarea id="job-description" placeholder="Description..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="job-category">Category</label>
-                            <select id="job-category">
-                                <option>Select</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Type</label>
-                            <div class="job-types">
-                                <label><input type="checkbox"> Full-Time</label>
-                                <label><input type="checkbox"> Part-Time</label>
-                                <label><input type="checkbox"> Hybrid</label>
-                                <label><input type="checkbox"> Remote</label>
+                <div class="container">
+                    <h4 class="text-center font-weight-bold text-primary" style="font-size: large; ">Add Job</h4>
+                    <div style="margin-top: 2rem;" class="form-wrap">
+                        <form id="survey-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="name-label" for="name">Job Title</label>
+                                        <input type="text" name="job-title" id="name" placeholder="Enter job title"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select id="dropdown" name="category" class="form-control" required>
+                                            <option disabled selected value>Select</option>
+                                            <option value="student">Medical</option>
+                                            <option value="job">Industrial</option>
+                                            <option value="learner">Software developement</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="job-location">Location</label>
-                            <input type="text" id="job-location" placeholder="Enter the location">
-                        </div>
-                        <div class="form-group">
-                            <label>Skill</label>
-                            <button type="button" class="add-skill-btn">Add Skills</button>
-                        </div>
-                        <div class="form-group">
-                            <label for="job-experience">Experience</label>
-                            <input type="number" id="job-experience" placeholder="Year">
-                        </div>
-                        <div class="form-group">
-                            <label for="job-salary">Salary</label>
-                            <input type="text" id="job-salary" placeholder="$ - $">
-                        </div>
-                        <div class="form-group">
-                            <label for="job-qualifications">Required Experience, Skills and Qualifications</label>
-                            <textarea id="job-qualifications" placeholder="Enter your main paragraph"></textarea>
-                            <textarea placeholder="Experience, Skills and Qualifications"></textarea>
-                            <textarea placeholder="Experience, Skills and Qualifications"></textarea>
-                            <button type="button" class="add-more-btn">Add More</button>
-                        </div>
-                        <div class="form-group">
-                            <label for="job-responsibilities">Responsibilities and Duties</label>
-                            <textarea id="job-responsibilities" placeholder="Enter your main paragraph"></textarea>
-                            <textarea placeholder="Responsibilities and Duties..."></textarea>
-                            <button type="button" class="add-more-btn">Add More</button>
-                        </div>
-                        <div class="form-buttons">
-                            <button type="submit" class="post-btn">POST</button>
-                            <button type="button" class="cancel-btn">CANCEL</button>
-                        </div>
-                    </form>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="number-label" for="number">Required Experience</label>
+                                        <input type="number" name="experience" id="number" class="form-control"
+                                            placeholder="Eg : 2yrs">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="salary">Salary:</label>
+                                        <div class="salary-inputs col-md-6">
+                                            <input type="number" id="minSalary" name="minSalary" placeholder="$4000">
+                                        </div>
+                                        <span>to</span>
+                                        <div class="salary-inputs col-md-6">
+                                            
+                                            <input type="number" id="maxSalary" name="maxSalary" placeholder="$4500">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label id="email-label" for="email">Job Location :</label>
+                                        <input type="text" name="location" placeholder="Enter job location" d="email"
+                                            class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <select id="dropdown" name="category" class="form-control" required>
+                                            <option disabled selected value>Select</option>
+                                            <option value="UAE">UAE</option>
+                                            <option value="INDIA">INDIA</option>
+                                            <option value="OMAN">OMAN</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="skills">Skill:</label>
+                                        <div id="skillContainer">
+                                            <div class="skill-item">
+                                                <span>Node js</span>
+                                                <button type="button" class="remove-btn"
+                                                    onclick="removeSkill(this)">x</button>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span>React</span>
+                                                <button type="button" class="remove-btn"
+                                                    onclick="removeSkill(this)">x</button>
+                                            </div>
+                                            <div class="skill-item">
+                                                <span>Mongo db</span>
+                                                <button type="button" class="remove-btn"
+                                                    onclick="removeSkill(this)">x</button>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addSkillBtn" class="add-btn">Add More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Job Type</label>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="full-time"
+                                                value="full-time" id="full-time" checked="">
+                                            <label class="custom-control-label" for="full-time">Full-time</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="part-time"
+                                                value="part-time" id="part-time" checked="">
+                                            <label class="custom-control-label" for="part-time">Part-time</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="hybrid"
+                                                value="hybrid" id="hybrid" checked="">
+                                            <label class="custom-control-label" for="hybrid">Hybrid</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="remote"
+                                                value="remote" id="remote" checked="">
+                                            <label class="custom-control-label" for="remote">Remote</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Responsibilities and duties</label>
+                                        <textarea id="duties" class="form-control" name="duties"
+                                            placeholder="Responsibilities and dutiess..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Job Description</label>
+                                        <textarea id="job-description" class="form-control" name="job-description"
+                                            placeholder="Job description.."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button type="submit" id="post" class="btn btn-primary btn-block">
+                                        POST</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" id="POST" class="btn btn-danger btn-block">
+                                        CANCEL</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
 
         </main>
 
     </div>
+
+    <script>
+        document.getElementById('addSkillBtn').addEventListener('click', function () {
+            const skillContainer = document.getElementById('skillContainer');
+            const newSkillInput = document.createElement('div');
+            newSkillInput.classList.add('skill-input');
+            newSkillInput.classList.add('skill-item');
+            newSkillInput.innerHTML = `
+        <input type="text" name="newSkill"  placeholder="Enter skill" onkeydown="handleSkillInput(event, this)">
+    `;
+            skillContainer.appendChild(newSkillInput);
+        });
+
+        function handleSkillInput(event, input) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const skillName = input.value.trim();
+                if (skillName !== "") {
+                    const skillContainer = document.getElementById('skillContainer');
+                    const newSkillItem = document.createElement('div');
+                    newSkillItem.classList.add('skill-item');
+                    newSkillItem.innerHTML = `
+                <span>${skillName}</span>
+                <button type="button" class="remove-btn" onclick="removeSkill(this)">x</button> `;
+                    skillContainer.appendChild(newSkillItem);
+                    input.parentElement.remove();
+                }
+            }
+        }
+
+        function removeSkill(button) {
+            const skillInput = button.parentElement;
+            skillInput.remove();
+        }
+
+    </script>
 </body>
 
 </html>

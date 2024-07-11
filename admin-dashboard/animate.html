@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .text-animation {
+            font-size: 3rem;
+            color: #fff;
+            position: relative;
+            animation: animateText 5s linear infinite;
+        }
+
+        @keyframes animateText {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-50px);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Hide preloader and show content after animation */
+        .hidden {
+            display: none;
+        }
+    </style>
+    <div class="preloader">
+        <div class="text-animation">Please Wait..</div>
+    </div>
+    <div class="content" style="display:none;">
+        <!-- Your website content goes here -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const preloader = document.querySelector('.preloader');
+            const content = document.querySelector('.content');
+
+            // Hide preloader and show content after animation
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                content.style.display = 'block';
+            }, 5000); // Match the duration of the animation
+        });
+
+    </script>
+</body>
+
+</html>
